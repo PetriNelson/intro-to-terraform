@@ -18,5 +18,10 @@ pipeline {
                 sh 'terraform version'
             }
         }
+         stage('createS3Bucket') {
+            steps {
+                sh 'pwd'
+            }
+        }
     }
 }
