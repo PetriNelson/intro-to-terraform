@@ -18,7 +18,8 @@ pipeline {
                  dir("${env.WORKSPACE}/s3-backend"){
                  sh "pwd"
                 }
-                sh 'terraform version'
+                sh 'terraform init'
+                 sh 'terraform version'
             }
         }
         stage('validate') {
