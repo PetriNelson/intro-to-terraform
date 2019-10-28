@@ -20,8 +20,10 @@ pipeline {
         }
          stage('createS3Bucket') {
             steps {
-                sh 'cd s3-backend'
-                sh 'pwd'
+                dir("${env.WORKSPACE}/s3-backend"){
+                 sh "pwd"
+                }
+                
             }
         }
     }
