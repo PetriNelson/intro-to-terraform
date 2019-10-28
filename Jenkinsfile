@@ -20,6 +20,7 @@ pipeline {
         }
          stage('createS3Bucket') {
             steps {
+                sh 'cd ./s3-backend'
                 sh 'pwd'
             }
         }
